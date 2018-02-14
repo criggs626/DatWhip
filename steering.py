@@ -13,7 +13,7 @@ def driveTest():
         drive_msg.jerk = 0
         drive_msg.steering_angle_velocity = 0
 	drive_msg_stamped.drive = drive_msg
-	for i in range(0,400):
+	while True:
 		pub.publish(drive_msg_stamped)
 		rate.sleep()
 
